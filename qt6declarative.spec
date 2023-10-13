@@ -6,7 +6,7 @@
 %define keepstatic 1
 Name     : qt6declarative
 Version  : 6.6.0
-Release  : 4
+Release  : 5
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtdeclarative-everywhere-src-6.6.0.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.0/submodules/qtdeclarative-everywhere-src-6.6.0.tar.xz
 Summary  : No detailed summary available

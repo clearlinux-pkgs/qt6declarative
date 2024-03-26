@@ -8,13 +8,12 @@
 %define keepstatic 1
 Name     : qt6declarative
 Version  : 6.6.3
-Release  : 20
+Release  : 21
 URL      : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtdeclarative-everywhere-src-6.6.3.tar.xz
 Source0  : https://download.qt.io/official_releases/qt/6.6/6.6.3/submodules/qtdeclarative-everywhere-src-6.6.3.tar.xz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause BSD-3-Clause BSD-3-Clause-Clear GFDL-1.3 GPL-2.0 GPL-3.0 LGPL-3.0 MIT OFL-1.1
-Requires: qt6declarative-bin = %{version}-%{release}
 Requires: qt6declarative-lib = %{version}-%{release}
 Requires: qt6declarative-libexec = %{version}-%{release}
 Requires: qt6declarative-license = %{version}-%{release}
@@ -37,21 +36,10 @@ designers to actually implement their UI vision. QML UIs can integrate
 with C++ code in many ways, including being loaded as a part of a C++ UI
 and loading data models from C++ and interacting with them.
 
-%package bin
-Summary: bin components for the qt6declarative package.
-Group: Binaries
-Requires: qt6declarative-libexec = %{version}-%{release}
-Requires: qt6declarative-license = %{version}-%{release}
-
-%description bin
-bin components for the qt6declarative package.
-
-
 %package dev
 Summary: dev components for the qt6declarative package.
 Group: Development
 Requires: qt6declarative-lib = %{version}-%{release}
-Requires: qt6declarative-bin = %{version}-%{release}
 Provides: qt6declarative-devel = %{version}-%{release}
 Requires: qt6declarative = %{version}-%{release}
 Requires: qt6declarative-staticdev
@@ -105,7 +93,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1711473152
+export SOURCE_DATE_EPOCH=1711491709
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -166,7 +154,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1711473152
+export SOURCE_DATE_EPOCH=1711491709
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6declarative
 cp %{_builddir}/qtdeclarative-everywhere-src-%{version}/LICENSES/BSD-3-Clause.txt %{buildroot}/usr/share/package-licenses/qt6declarative/b073f11f0c81a95ab5e32aa6b5d23a5955a95274 || :
@@ -191,33 +179,6 @@ popd
 
 %files
 %defattr(-,root,root,-)
-
-%files bin
-%defattr(-,root,root,-)
-/V3/usr/bin/qml
-/V3/usr/bin/qmldom
-/V3/usr/bin/qmleasing
-/V3/usr/bin/qmlformat
-/V3/usr/bin/qmllint
-/V3/usr/bin/qmlplugindump
-/V3/usr/bin/qmlpreview
-/V3/usr/bin/qmlprofiler
-/V3/usr/bin/qmlscene
-/V3/usr/bin/qmltc
-/V3/usr/bin/qmltestrunner
-/V3/usr/bin/qmltime
-/usr/bin/qml
-/usr/bin/qmldom
-/usr/bin/qmleasing
-/usr/bin/qmlformat
-/usr/bin/qmllint
-/usr/bin/qmlplugindump
-/usr/bin/qmlpreview
-/usr/bin/qmlprofiler
-/usr/bin/qmlscene
-/usr/bin/qmltc
-/usr/bin/qmltestrunner
-/usr/bin/qmltime
 
 %files dev
 %defattr(-,root,root,-)
@@ -2432,6 +2393,18 @@ popd
 /V3/usr/lib64/libQt6QuickTemplates2.so.6.6.3
 /V3/usr/lib64/libQt6QuickTest.so.6.6.3
 /V3/usr/lib64/libQt6QuickWidgets.so.6.6.3
+/V3/usr/lib64/qt6/bin/qml
+/V3/usr/lib64/qt6/bin/qmldom
+/V3/usr/lib64/qt6/bin/qmleasing
+/V3/usr/lib64/qt6/bin/qmlformat
+/V3/usr/lib64/qt6/bin/qmllint
+/V3/usr/lib64/qt6/bin/qmlplugindump
+/V3/usr/lib64/qt6/bin/qmlpreview
+/V3/usr/lib64/qt6/bin/qmlprofiler
+/V3/usr/lib64/qt6/bin/qmlscene
+/V3/usr/lib64/qt6/bin/qmltc
+/V3/usr/lib64/qt6/bin/qmltestrunner
+/V3/usr/lib64/qt6/bin/qmltime
 /V3/usr/lib64/qt6/plugins/qmllint/libquicklintplugin.so
 /V3/usr/lib64/qt6/plugins/qmltooling/libqmldbg_debugger.so
 /V3/usr/lib64/qt6/plugins/qmltooling/libqmldbg_inspector.so
@@ -2556,6 +2529,18 @@ popd
 /usr/lib64/libQt6QuickTest.so.6.6.3
 /usr/lib64/libQt6QuickWidgets.so.6
 /usr/lib64/libQt6QuickWidgets.so.6.6.3
+/usr/lib64/qt6/bin/qml
+/usr/lib64/qt6/bin/qmldom
+/usr/lib64/qt6/bin/qmleasing
+/usr/lib64/qt6/bin/qmlformat
+/usr/lib64/qt6/bin/qmllint
+/usr/lib64/qt6/bin/qmlplugindump
+/usr/lib64/qt6/bin/qmlpreview
+/usr/lib64/qt6/bin/qmlprofiler
+/usr/lib64/qt6/bin/qmlscene
+/usr/lib64/qt6/bin/qmltc
+/usr/lib64/qt6/bin/qmltestrunner
+/usr/lib64/qt6/bin/qmltime
 /usr/lib64/qt6/metatypes/qt6labsanimation_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6labsfolderlistmodel_relwithdebinfo_metatypes.json
 /usr/lib64/qt6/metatypes/qt6labsqmlmodels_relwithdebinfo_metatypes.json

@@ -43,6 +43,7 @@ Requires: qt6declarative-lib = %{version}-%{release}
 Provides: qt6declarative-devel = %{version}-%{release}
 Requires: qt6declarative = %{version}-%{release}
 Requires: qt6declarative-staticdev
+Requires: qt6base-staticdev
 
 %description dev
 dev components for the qt6declarative package.

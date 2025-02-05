@@ -8,7 +8,7 @@
 %define keepstatic 1
 Name     : qt6declarative
 Version  : 6.8.2
-Release  : 32
+Release  : 33
 URL      : https://download.qt.io/official_releases/qt/6.8/6.8.2/submodules/qtdeclarative-everywhere-src-6.8.2.zip
 Source0  : https://download.qt.io/official_releases/qt/6.8/6.8.2/submodules/qtdeclarative-everywhere-src-6.8.2.zip
 Summary  : No detailed summary available
@@ -42,8 +42,8 @@ Group: Development
 Requires: qt6declarative-lib = %{version}-%{release}
 Provides: qt6declarative-devel = %{version}-%{release}
 Requires: qt6declarative = %{version}-%{release}
-Requires: qt6declarative-staticdev
 Requires: qt6base-staticdev
+Requires: qt6declarative-staticdev
 
 %description dev
 dev components for the qt6declarative package.
@@ -97,7 +97,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1738692155
+export SOURCE_DATE_EPOCH=1738724815
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -160,7 +160,7 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1738692155
+export SOURCE_DATE_EPOCH=1738724815
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/qt6declarative
 cp %{_builddir}/qtdeclarative-everywhere-src-%{version}/LICENSES/Apache-2.0.txt %{buildroot}/usr/share/package-licenses/qt6declarative/1c619b057a9bf7a8234b3105fcfb5b375e749db1 || :
